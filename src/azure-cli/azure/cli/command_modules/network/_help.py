@@ -4994,3 +4994,24 @@ examples:
             --resource-type vpnConnection --storage-account MyStorageAccount \\
             --storage-path https://{storageAccountName}.blob.core.windows.net/{containerName}
 """
+
+helps['network ip-group'] = """
+type: group
+short-summary: Manage IpGroup.
+"""
+
+helps['network ip-group create'] = """
+type: command
+short-summary: Create an IpGroup in a specified resource group.
+"""
+
+helps['network ip-group list'] = """
+type: command
+short-summary: List IpGroups.
+"""
+
+
+helps['network ip-group update'] = """
+type: command
+short-summary: Update IpGroup tags
+"""

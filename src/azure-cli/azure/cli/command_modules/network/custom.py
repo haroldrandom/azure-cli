@@ -4579,3 +4579,33 @@ def update_virtual_router_peering(cmd, instance, peer_asn=None, peer_ip=None):
         c.set_param('peer_ip', peer_ip)
     return instance
 # endregion
+
+
+# region IpGroup
+def create_ip_groups(cmd, resource_group_name, ip_groups_name, ip_addresses, location=None, tags=None):
+    IpGroup = cmd.get_models('IpGroup')
+    client = network_client_factory(cmd.cli_ctx).ip_groups
+
+    print("resource_group_name = " + resource_group_name)
+    print("ip_group_name = " + ip_groups_name)
+    print("ip_addresses = ", ip_addresses)
+
+    ip_group = IpGroup(location=location, ip_addresses=ip_addresses, tags=tags)
+
+    return client.create_or_update(resource_group_name, ip_groups_name, ip_group)
+
+
+def list_ip_groups(cmd, resource_group_name=None):
+    client = network_client_factory(cmd.cli_ctx).ip_groups
+
+    if resource_group_name is not None:
+        return client.list_by_resource_group(resource_group_name)
+
+    return client.list()
+
+
+def update_ip_groups(cmd, instance, tags=None):
+    with cmd.update_context(instance) as c:
+        c.set_param('tags', tags)
+    return instance
+# endregion

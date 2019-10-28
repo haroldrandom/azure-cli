@@ -27,7 +27,7 @@ from azure.cli.command_modules.network._client_factory import (
     cf_express_route_circuit_connections, cf_express_route_gateways, cf_express_route_connections,
     cf_express_route_ports, cf_express_route_port_locations, cf_express_route_links, cf_app_gateway_waf_policy,
     cf_service_tags, cf_private_link_services, cf_private_endpoint_types, cf_peer_express_route_circuit_connections,
-    cf_virtual_router, cf_virtual_router_peering)
+    cf_virtual_router, cf_virtual_router_peering, cf_ip_groups)
 from azure.cli.command_modules.network._util import (
     list_network_resource_property, get_network_resource_property_entry, delete_network_resource_property_entry)
 from azure.cli.command_modules.network._format import (
@@ -324,6 +324,12 @@ def load_command_table(self, _):
         operations_tmpl='azure.mgmt.network.operations#VirtualRouterPeeringsOperations.{}',
         client_factory=cf_virtual_router_peering,
         min_api='2019-08-01'
+    )
+
+    network_ip_groups_sdk = CliCommandType(
+        operations_tmpl='azure.mgmt.network.operations#IpGroupsOperations.{}',
+        client_factory=cf_ip_groups,
+        min_api='2019-09-01'
     )
 
     network_custom = CliCommandType(operations_tmpl='azure.cli.command_modules.network.custom#{}')
@@ -1016,4 +1022,13 @@ def load_command_table(self, _):
         g.command('delete', 'delete')
         g.show_command('show', 'get')
         g.command('list', 'list')
+    # endregion
+
+    # region IpGroups
+    with self.command_group('network ip-group', network_ip_groups_sdk, min_api='2019-09-01') as g:
+        g.custom_command('create', 'create_ip_groups')
+        g.generic_update_command('update', custom_func_name='update_ip_groups')
+        g.custom_command('list', 'list_ip_groups')
+        g.command('delete', 'delete')
+        g.show_command('show', 'get')
     # endregion

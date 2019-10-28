@@ -1340,3 +1340,11 @@ def load_arguments(self, _):
     with self.argument_context('network traffic-manager endpoint list') as c:
         c.argument('profile_name', id_part=None)
     # endregion
+
+    # region IpGroup
+    with self.argument_context('network ip-group', min_api='2019-09-01') as c:
+        c.argument('ip_groups_name', options_list=['--name', '-n'], help='Name of the IpGroup')
+
+    with self.argument_context('network ip-group create', min_api='2019-09-01') as c:
+        c.argument('ip_addresses', nargs='+', help='Space-separated list of IpAddress or IpAddressPrefix.')
+    # endregion
