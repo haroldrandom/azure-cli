@@ -4842,6 +4842,11 @@ examples:
     text: az network watcher connection-monitor stop -l westus -n MyConnectionMonitorName
 """
 
+helps['network watcher connection-monitor test-group'] = """
+type: group
+short-summary: Manage test group of a connection monitor
+"""
+
 helps['network watcher flow-log'] = """
 type: group
 short-summary: Manage network security group flow logging.
