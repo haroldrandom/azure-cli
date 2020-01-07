@@ -860,6 +860,15 @@ def load_command_table(self, _):
         g.custom_command('list', 'list_nw_connection_monitor_v2_test_group')
         g.custom_command('show', 'show_nw_connection_monitor_v2_test_group')
 
+    with self.command_group('network watcher connection-monitor output',
+                            network_watcher_cm_sdk,
+                            client_factory=cf_connection_monitor,
+                            is_preview=True) as g:
+        g.custom_command('create', 'create_nw_connection_monitor_v2_output')
+        g.custom_command('delete', 'delete_nw_connection_monitor_v2_output')
+        g.custom_command('update', 'update_nw_connection_monitor_v2_output')
+        g.custom_command('list', 'list_nw_connection_monitor_v2_output')
+
     with self.command_group('network watcher packet-capture', network_watcher_pc_sdk, min_api='2016-09-01') as g:
         g.custom_command('create', 'create_nw_packet_capture', client_factory=cf_packet_capture, validator=process_nw_packet_capture_create_namespace)
         g.show_command('show', 'get')

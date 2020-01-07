@@ -3570,6 +3570,72 @@ def list_nw_connection_monitor_v2_test_group(cmd,
     pass
 
 
+def create_nw_connection_monitor_v2_output(cmd,
+                                           resource_group_name,
+                                           watcher,
+                                           connection_monitor,
+                                           type,
+                                           workspaces):
+    """
+    Create output destination under a connection monitor
+    :param cmd:
+    :param resource_group_name:
+    :param watcher: The name of a network watcher
+    :param connection_monitor: The name of a connection monitor
+    :param type: Connection monitor output destination type. Currently, only "Workspace" is supported
+    :param workspaces: List of log analytics workspace resource ID
+    :return:
+    """
+    pass
+
+
+def delete_nw_connection_monitor_v2_output(cmd,
+                                           resource_group_name,
+                                           watcher,
+                                           connection_monitor):
+    """
+    Delete output destination of a connection monitor
+    :param cmd:
+    :param resource_group_name:
+    :param watcher: The name of a network watcher
+    :param connection_monitor: The name of a connection monitor
+    :return:
+    """
+    pass
+
+
+def update_nw_connection_monitor_v2_output(cmd,
+                                           resource_group_name,
+                                           watcher,
+                                           connection_monitor,
+                                           workspaces):
+    """
+    Update output destination of a connection monitor
+    :param cmd:
+    :param resource_group_name:
+    :param watcher: The name of a network watcher
+    :param connection_monitor: The name of a connection monitor
+    :param workspaces: List of log analytics workspace resource ID
+    :return:
+    """
+    pass
+
+
+def list_nw_connection_monitor_v2_output(cmd,
+                                         resource_group_name,
+                                         watcher,
+                                         connection_monitor):
+    """
+    Update output destination of a connection monitor
+    :param cmd:
+    :param resource_group_name:
+    :param watcher: The name of a network watcher
+    :param connection_monitor: The name of a connection monitor
+    :return:
+    """
+    pass
+
+
 def show_nw_connection_monitor_v2_test_group(cmd,
                                              client,
                                              resource_group_name,

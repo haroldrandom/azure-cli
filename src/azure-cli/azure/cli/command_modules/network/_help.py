@@ -4847,6 +4847,11 @@ type: group
 short-summary: Manage test group of a connection monitor
 """
 
+helps['network watcher connection-monitor output'] = """
+type: group
+short-summary: Manage output destination of a connection monitor
+"""
+
 helps['network watcher flow-log'] = """
 type: group
 short-summary: Manage network security group flow logging.
