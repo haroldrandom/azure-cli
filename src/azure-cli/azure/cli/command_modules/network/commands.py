@@ -856,7 +856,7 @@ def load_command_table(self, _):
                             is_preview=True) as g:
         g.custom_command('create', 'create_nw_connection_monitor_v2_test_group')
         g.custom_command('delete', 'delete_nw_connection_monitor_v2_test_group')
-        g.custom_command('update', 'update_nw_connection_monitor_v2_endpoint')
+        g.custom_command('update', 'update_nw_connection_monitor_v2_test_group')
         g.custom_command('list', 'list_nw_connection_monitor_v2_test_group')
         g.custom_command('show', 'show_nw_connection_monitor_v2_test_group')
 

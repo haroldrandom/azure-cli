@@ -3501,7 +3501,7 @@ def create_nw_connection_monitor_v2_test_group(cmd,
     :param resource_group_name:
     :param watcher: The name of a network watcher
     :param connection_monitor: The name of a connection monitor
-    :param name: The name of the connection monitor endpoint
+    :param name: The name of the connection monitor test group
     :param disable: Disable this test group or not
     :param test_configurations: List of test configuration names
     :param sources: List of source endpoint names
@@ -3511,16 +3511,16 @@ def create_nw_connection_monitor_v2_test_group(cmd,
     pass
 
 
-def update_nw_connection_monitor_v2_endpoint(cmd,
-                                             client,
-                                             resource_group_name,
-                                             watcher,
-                                             connection_monitor,
-                                             name,
-                                             disable=None,
-                                             test_configurations=None,
-                                             sources=None,
-                                             destinations=None):
+def update_nw_connection_monitor_v2_test_group(cmd,
+                                               client,
+                                               resource_group_name,
+                                               watcher,
+                                               connection_monitor,
+                                               name,
+                                               disable=None,
+                                               test_configurations=None,
+                                               sources=None,
+                                               destinations=None):
     """
     Create a test group under a connection monitor
     :param cmd:
@@ -3528,7 +3528,7 @@ def update_nw_connection_monitor_v2_endpoint(cmd,
     :param resource_group_name:
     :param watcher: The name of a network watcher
     :param connection_monitor: The name of a connection monitor
-    :param name: The name of the connection monitor endpoint
+    :param name: The name of the connection monitor test group
     :param disable: Disable this test group or not
     :param test_configurations: List of test configuration names
     :param sources: List of source endpoint names
@@ -3549,7 +3549,7 @@ def delete_nw_connection_monitor_v2_test_group(cmd,
     :param resource_group_name:
     :param watcher: The name of a network watcher
     :param connection_monitor: The name of a connection monitor
-    :param name: The name of the connection monitor endpoint
+    :param name: The name of the connection monitor test group
     :return:
     """
     pass
@@ -3565,6 +3565,25 @@ def list_nw_connection_monitor_v2_test_group(cmd,
     :param resource_group_name:
     :param watcher: The name of a network watcher
     :param connection_monitor: The name of a connection monitor
+    :return:
+    """
+    pass
+
+
+def show_nw_connection_monitor_v2_test_group(cmd,
+                                             client,
+                                             resource_group_name,
+                                             watcher,
+                                             connection_monitor,
+                                             name):
+    """
+    Show one test group of a connection monitor
+    :param cmd:
+    :param client:
+    :param resource_group_name:
+    :param watcher: The name of a network watcher
+    :param connection_monitor: The name of a connection monitor
+    :param name: The name of the connection monitor test group
     :return:
     """
     pass
@@ -3631,25 +3650,6 @@ def list_nw_connection_monitor_v2_output(cmd,
     :param resource_group_name:
     :param watcher: The name of a network watcher
     :param connection_monitor: The name of a connection monitor
-    :return:
-    """
-    pass
-
-
-def show_nw_connection_monitor_v2_test_group(cmd,
-                                             client,
-                                             resource_group_name,
-                                             watcher,
-                                             connection_monitor,
-                                             name):
-    """
-    Show one test group of a connection monitor
-    :param cmd:
-    :param client:
-    :param resource_group_name:
-    :param watcher: The name of a network watcher
-    :param connection_monitor: The name of a connection monitor
-    :param name: The name of the connection monitor endpoint
     :return:
     """
     pass
