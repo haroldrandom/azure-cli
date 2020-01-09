@@ -1019,6 +1019,54 @@ def load_arguments(self, _):
             c.extra('location', get_location_type(self.cli_ctx), required=True)
             c.argument('resource_group_name', arg_type=ignore_type, validator=nw_validator)
 
+    with self.argument_context('network watcher connection-monitor test-configuration') as c:
+        c.argument('protocol',
+                   arg_type=get_enum_type(['Tcp', 'Http', 'Icmp']),
+                   help='The protocol to use in test evaluation. If specified, choose a corresponding parameter set')
+        c.argument('preferred_ip_version',
+                   arg_type=get_enum_type(['IPv4', 'IPv6']),
+                   help='The preferred IP version to use in test evaluation. '
+                        'The connection monitor may choose to use a different version depending on other parameters')
+        c.argument('frequency',
+                   help='The frequency of test evaluation, in seconds')
+
+    with self.argument_context('network watcher connection-monitor test-configuration',
+                               arg_group='Threshold') as c:
+        c.argument('threshold_failed_percent',
+                   help='The maximum percentage of failed checks permitted for a test to evaluate as successful')
+        c.argument('threshold_round_trip_time',
+                   help='The maximum round-trip time in milliseconds permitted for a test to evaluate as successful')
+
+    with self.argument_context('network watcher connection-monitor test-configuration',
+                               arg_group='HTTP Configuration') as c:
+        c.argument('http_port',
+                   help='The port to connect to')
+        c.argument('http_method',
+                   arg_type=get_enum_type(['Get', 'Post']),
+                   help='The HTTP method to use.')
+        c.argument('http_path',
+                   help='The path component of the URI. For instance, /dir1/dir2.')
+        c.argument('http_request_header',
+                   help='The HTTP headers to transmit with the request. '
+                        'Use multiple --request-header to specify multiple HTTP headers')
+        c.argument('http_valid_status_code_range',
+                   help='HTTP status codes to consider successful. For instance, 2xx,301-304,418')
+        c.argument('http_prefer_https',
+                   help='Value indicating whether HTTPS is preferred over HTTP '
+                        'in cases where the choice is not explicit')
+
+    with self.argument_context('network watcher connection-monitor test-configuration',
+                               arg_group='TCP Configuration') as c:
+        c.argument('tcp_port',
+                   help='The port to connect to')
+        c.argument('tcp_disable_trace_route',
+                   help='Value indicating whether path evaluation with trace route should be disabled')
+
+    with self.argument_context('network watcher connection-monitor test-configuration',
+                               arg_group='ICMP Configuration') as c:
+        c.argument('icmp_disable_trace_route',
+                   help='Value indicating whether path evaluation with trace route should be disabled')
+
     with self.argument_context('network watcher configure') as c:
         c.argument('locations', get_location_type(self.cli_ctx), options_list=['--locations', '-l'], nargs='+')
         c.argument('enabled', arg_type=get_three_state_flag())

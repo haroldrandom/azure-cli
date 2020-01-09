@@ -4847,6 +4847,11 @@ type: group
 short-summary: Manage endpoint of a connection monitor
 """
 
+helps['network watcher connection-monitor test-configuration'] = """
+type: group
+short-summary: Manage test configuration of a connection monitor
+"""
+
 helps['network watcher connection-monitor test-group'] = """
 type: group
 short-summary: Manage test group of a connection monitor

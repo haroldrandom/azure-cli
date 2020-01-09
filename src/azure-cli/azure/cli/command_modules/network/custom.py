@@ -3590,6 +3590,127 @@ def list_nw_connection_monitor_v2_endpoint(cmd,
     pass
 
 
+def create_nw_connection_monitor_v2_test_configuration(cmd,
+                                                       client,
+                                                       resource_group_name,
+                                                       watcher,
+                                                       connection_monitor,
+                                                       name,
+                                                       protocol,
+                                                       frequency=None,
+                                                       preferred_ip_version=None,
+                                                       threshold_failed_percent=None,
+                                                       threshold_round_trip_time=None,
+                                                       http_port=None,
+                                                       http_method=None,
+                                                       http_path=None,
+                                                       http_request_header=None,
+                                                       http_valid_status_code_range=None,
+                                                       http_prefer_https=None,
+                                                       tcp_port=None,
+                                                       tcp_disable_trace_route=None,
+                                                       icmp_disable_trace_route=None):
+    """
+    Create a test configuration under a connection monitor
+    :param cmd:
+    :param client:
+    :param resource_group_name:
+    :param watcher: The name of a network watcher
+    :param connection_monitor: The name of a connection monitor
+    :param name: The name of the connection monitor test configuration
+    :return:
+    """
+    pass
+
+
+def delete_nw_connection_monitor_v2_test_configuration(cmd,
+                                                       client,
+                                                       resource_group_name,
+                                                       watcher,
+                                                       connection_monitor,
+                                                       name):
+    """
+    Delete a test configuration of a connection monitor
+    :param cmd:
+    :param client:
+    :param resource_group_name:
+    :param watcher: The name of a network watcher
+    :param connection_monitor: The name of a connection monitor
+    :param name: The name of the connection monitor test configuration
+    :return:
+    """
+    pass
+
+
+def update_nw_connection_monitor_v2_test_configuration(cmd,
+                                                       client,
+                                                       resource_group_name,
+                                                       watcher,
+                                                       connection_monitor,
+                                                       name,
+                                                       protocol,
+                                                       frequency=None,
+                                                       preferred_ip_version=None,
+                                                       threshold_failed_percent=None,
+                                                       threshold_round_trip_time=None,
+                                                       http_port=None,
+                                                       http_method=None,
+                                                       http_path=None,
+                                                       http_request_header=None,
+                                                       http_valid_status_code_range=None,
+                                                       http_prefer_https=None,
+                                                       tcp_port=None,
+                                                       tcp_disable_trace_route=None,
+                                                       icmp_disable_trace_route=None):
+    """
+    Update a test configuration of a connection monitor
+    :param cmd:
+    :param client:
+    :param resource_group_name:
+    :param watcher: The name of a network watcher
+    :param connection_monitor: The name of a connection monitor
+    :param name: The name of the connection monitor test configuration
+    :return:
+    """
+    pass
+
+
+def show_nw_connection_monitor_v2_test_configuration(cmd,
+                                                     client,
+                                                     resource_group_name,
+                                                     watcher,
+                                                     connection_monitor,
+                                                     name):
+    """
+    Show a test configuration of a connection monitor
+    :param cmd:
+    :param client:
+    :param resource_group_name:
+    :param watcher: The name of a network watcher
+    :param connection_monitor: The name of a connection monitor
+    :param name: The name of the connection monitor test configuration
+    :return:
+    """
+    pass
+
+def list_nw_connection_monitor_v2_test_configuration(cmd,
+                                                     client,
+                                                     resource_group_name,
+                                                     watcher,
+                                                     connection_monitor,
+                                                     name):
+    """
+    Show a test configuration of a connection monitor
+    :param cmd:
+    :param client:
+    :param resource_group_name:
+    :param watcher: The name of a network watcher
+    :param connection_monitor: The name of a connection monitor
+    :return:
+    """
+    pass
+
+
 def create_nw_connection_monitor_v2_test_group(cmd,
                                                client,
                                                resource_group_name,
