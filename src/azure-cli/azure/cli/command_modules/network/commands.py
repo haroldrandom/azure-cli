@@ -850,6 +850,16 @@ def load_command_table(self, _):
         g.command('query', 'query')
         g.command('list', 'list')
 
+    with self.command_group('network watcher connection-monitor endpoint',
+                            network_watcher_cm_sdk,
+                            client_factory=cf_connection_monitor,
+                            is_preview=True) as g:
+        g.custom_command('create', 'create_nw_connection_monitor_v2_endpoint')
+        g.custom_command('delete', 'delete_nw_connection_monitor_v2_endpoint')
+        g.custom_command('update', 'update_nw_connection_monitor_v2_endpoint')
+        g.custom_command('show', 'show_nw_connection_monitor_v2_endpoint')
+        g.custom_command('list', 'list_nw_connection_monitor_v2_endpoint')
+
     with self.command_group('network watcher connection-monitor test-group',
                             network_watcher_cm_sdk,
                             client_factory=cf_connection_monitor,

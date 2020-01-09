@@ -3484,6 +3484,112 @@ def create_nw_connection_monitor(cmd, client, connection_monitor_name, watcher_r
     return client.create_or_update(watcher_rg, watcher_name, connection_monitor_name, connection_monitor)
 
 
+def create_nw_connection_monitor_v2_endpoint(cmd,
+                                             client,
+                                             resource_group_name,
+                                             watcher,
+                                             connection_monitor,
+                                             name,
+                                             filter_type=None,
+                                             filter_item=None):
+    """
+    Create an endpoint under a connection monitor
+    :param cmd:
+    :param client:
+    :param resource_group_name:
+    :param watcher: The name of a network watcher
+    :param connection_monitor: The name of a connection monitor
+    :param name: The name of the connection monitor endpoint
+    :param filter_type: The behavior of the endpoint filter. Currently only 'Include' is supported
+    :param filter_item: Sequence of property=value pair to define an filter item.
+                        Property currently include: type, address.
+                        Property type supports 'AgentAddress' only now.
+    :return:
+    """
+    pass
+
+
+def delete_nw_connection_monitor_v2_endpoint(cmd,
+                                             client,
+                                             resource_group_name,
+                                             watcher,
+                                             connection_monitor,
+                                             name):
+    """
+    Delete an endpoint of a connection monitor
+    :param cmd:
+    :param client:
+    :param resource_group_name:
+    :param watcher: The name of a network watcher
+    :param connection_monitor: The name of a connection monitor
+    :param name: The name of the connection monitor endpoint
+    :return:
+    """
+    pass
+
+
+def update_nw_connection_monitor_v2_endpoint(cmd,
+                                             client,
+                                             resource_group_name,
+                                             watcher,
+                                             connection_monitor,
+                                             name,
+                                             filter_type=None,
+                                             filter_item=None):
+    """
+    Update an endpoint of a connection monitor
+    :param cmd:
+    :param client:
+    :param resource_group_name:
+    :param watcher: The name of a network watcher
+    :param connection_monitor: The name of a connection monitor
+    :param name: The name of the connection monitor endpoint
+    :param filter_type: The behavior of the endpoint filter. Currently only 'Include' is supported
+    :param filter_item: Sequence of property=value pair to define an filter item.
+                        Property currently include: type, address.
+                        Property type supports 'AgentAddress' only now.
+                        Override existing filter items if specified
+    :return:
+    """
+    pass
+
+
+def show_nw_connection_monitor_v2_endpoint(cmd,
+                                           client,
+                                           resource_group_name,
+                                           watcher,
+                                           connection_monitor,
+                                           name):
+    """
+    Show an endpoint of a connection monitor
+    :param cmd:
+    :param client:
+    :param resource_group_name:
+    :param watcher: The name of a network watcher
+    :param connection_monitor: The name of a connection monitor
+    :param name: The name of the connection monitor endpoint
+    :return:
+    """
+    pass
+
+
+def list_nw_connection_monitor_v2_endpoint(cmd,
+                                           client,
+                                           resource_group_name,
+                                           watcher,
+                                           connection_monitor):
+    """
+    Show an endpoint of a connection monitor
+    :param cmd:
+    :param client:
+    :param resource_group_name:
+    :param watcher: The name of a network watcher
+    :param connection_monitor: The name of a connection monitor
+    :return:
+    """
+    pass
+
+
 def create_nw_connection_monitor_v2_test_group(cmd,
                                                client,
                                                resource_group_name,
