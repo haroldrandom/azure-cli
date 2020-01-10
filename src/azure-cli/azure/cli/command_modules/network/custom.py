@@ -3504,6 +3504,7 @@ def create_nw_connection_monitor_v2_endpoint(cmd,
     :param filter_item: Sequence of property=value pair to define an filter item.
                         Property currently include: type, address.
                         Property type supports 'AgentAddress' only now.
+                        Use multiple --filter-item to specify multiple filter items.
     :return:
     """
     pass
@@ -3579,7 +3580,7 @@ def list_nw_connection_monitor_v2_endpoint(cmd,
                                            watcher,
                                            connection_monitor):
     """
-    Show an endpoint of a connection monitor
+    List an endpoint of a connection monitor
     :param cmd:
     :param client:
     :param resource_group_name:
@@ -3693,14 +3694,14 @@ def show_nw_connection_monitor_v2_test_configuration(cmd,
     """
     pass
 
+
 def list_nw_connection_monitor_v2_test_configuration(cmd,
                                                      client,
                                                      resource_group_name,
                                                      watcher,
-                                                     connection_monitor,
-                                                     name):
+                                                     connection_monitor):
     """
-    Show a test configuration of a connection monitor
+    List a test configuration of a connection monitor
     :param cmd:
     :param client:
     :param resource_group_name:
@@ -3749,7 +3750,7 @@ def update_nw_connection_monitor_v2_test_group(cmd,
                                                sources=None,
                                                destinations=None):
     """
-    Create a test group under a connection monitor
+    Update a test group under a connection monitor
     :param cmd:
     :param client:
     :param resource_group_name:
@@ -3872,7 +3873,7 @@ def list_nw_connection_monitor_v2_output(cmd,
                                          watcher,
                                          connection_monitor):
     """
-    Update output destination of a connection monitor
+    List output destination of a connection monitor
     :param cmd:
     :param resource_group_name:
     :param watcher: The name of a network watcher
