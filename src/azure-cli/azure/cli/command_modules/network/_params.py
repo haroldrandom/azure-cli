@@ -1004,9 +1004,14 @@ def load_arguments(self, _):
     with self.argument_context('network watcher connection-monitor create') as c:
         c.argument('monitoring_interval', help='Monitoring interval in seconds.', type=int)
         c.argument('do_not_start', action='store_true', help='Create the connection monitor but do not start it immediately.')
-        c.argument('source_resource', help='Name or ID of the resource from which to originate traffic.')
-        c.argument('source_port', help='Port number from which to originate traffic.')
         c.ignore('location')
+        c.argument('notes', help='Optional notes to be associated with the connection monitor')
+
+    with self.argument_context('network watcher connection-monitor', arg_group='Source') as c:
+        c.argument('source_resource',
+                   help='Create the connection monitor but do not start it immediately.')
+        c.argument('source_port',
+                   help='Port number from which to originate traffic.')
 
     with self.argument_context('network watcher connection-monitor', arg_group='Destination') as c:
         c.argument('dest_resource', help='Name of ID of the resource to receive traffic.')

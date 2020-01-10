@@ -3464,7 +3464,8 @@ def configure_network_watcher(cmd, client, locations, resource_group_name=None, 
 def create_nw_connection_monitor(cmd, client, connection_monitor_name, watcher_rg, watcher_name,  # pylint: disable=unused-argument
                                  source_resource, resource_group_name=None, source_port=None, location=None,
                                  dest_resource=None, dest_port=None, dest_address=None,
-                                 tags=None, do_not_start=None, monitoring_interval=60):
+                                 tags=None, do_not_start=None, monitoring_interval=60,
+                                 notes=None):
     ConnectionMonitor, ConnectionMonitorSource, ConnectionMonitorDestination = cmd.get_models(
         'ConnectionMonitor', 'ConnectionMonitorSource', 'ConnectionMonitorDestination')
     connection_monitor = ConnectionMonitor(
